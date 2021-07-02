@@ -5,7 +5,7 @@ import * as Express from "express";
 
 @Resolver()
 class HelloResolver {
-  @Query(() => String)
+  @Query(() => String, { name: "helloWorld" })
   async hello() {
     return "This is a typescript, apolloserver, graphql boilerplate!";
   }
